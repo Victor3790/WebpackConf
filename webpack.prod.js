@@ -9,7 +9,7 @@ module.exports = {
     mode: 'production',
     entry: path.resolve(__dirname, 'src/entry.js'),
     output: {
-      filename: '[name].[hash].js'
+      filename: 'js/[name].[hash].js'
     },
     optimization: {
       minimizer: [
@@ -21,7 +21,15 @@ module.exports = {
       rules: [
         {
           test: /\.scss$/,
-          use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '../'
+              }
+            },
+            'css-loader', 'postcss-loader', 'sass-loader'
+          ]
         },
         {
           test: /\.html$/,
