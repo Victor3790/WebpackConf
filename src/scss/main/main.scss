@@ -18,6 +18,10 @@ body{
   color: $text;
 }
 
+h1{
+  display: flex;
+}
+
 //Media queries
 @import "./small";
 @import "./medium";
