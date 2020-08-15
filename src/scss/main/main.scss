@@ -1,3 +1,7 @@
+//Project variables
+@import "../bootstrap";
+@import "../vars";
+
 $background: #000122;
 $text: #fff;
 
@@ -13,3 +17,9 @@ body{
   background-color: $background;
   color: $text;
 }
+
+//Media queries
+@import "./small";
+@import "./medium";
+@import "./large";
+@import "./xLarge";

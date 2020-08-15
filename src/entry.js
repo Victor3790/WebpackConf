@@ -1,1 +1,2 @@
-import './scss/main.scss'
+import './scss/bootstrap.scss';
+import './scss/main/main.scss';
