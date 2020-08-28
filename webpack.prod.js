@@ -33,7 +33,7 @@ module.exports = {
         },
         {
           test: /\.html$/,
-          use: ['html-loader']
+          use: [ {loader:'html-loader-srcset'} ]
         },
         {
           test: /\.(svg|png|jpg|gif)$/,
@@ -59,7 +59,7 @@ module.exports = {
         }
       }),
       new MiniCssExtractPlugin({
-        filename: 'css/[name].[hash].css'
+        filename: 'css/[name].css'
       }),
       new CleanWebpackPlugin()
     ]
